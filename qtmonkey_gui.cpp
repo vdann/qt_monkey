@@ -21,6 +21,9 @@
     if (__name__ == nullptr)                                                   \
         return;
 
+//#define QTMONKEY_APP_NAME "$<TARGET_FILE_NAME:qtmonkey_app>"
+#define QTMONKEY_APP_NAME "qtmonkey_app.exe"
+
 static const QLatin1String prefsDomain{"qt_monkey"};
 static const QLatin1String prefsSectName{"main"};
 static const QLatin1String testAppPathPrefName{"path to test app"};

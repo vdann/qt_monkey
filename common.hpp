@@ -5,6 +5,8 @@
 #include <QtCore/QProcess>
 #include <QtCore/QString>
 
+#include "qtmonkey_lib_global.h"
+
 // for translation
 #define T_(str) QString(str)
 
@@ -20,8 +22,8 @@
 
 namespace qt_monkey_common
 {
-QString processErrorToString(QProcess::ProcessError err);
-void processEventsFor(int timeoutMs);
+QTMONKEY_LIB_EXPORT QString processErrorToString(QProcess::ProcessError err);
+QTMONKEY_LIB_EXPORT void processEventsFor(int timeoutMs);
 
 // not implement for QString because of we may need different
 // QString->QByteArray

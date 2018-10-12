@@ -3,6 +3,8 @@
 #include <QtCore/QObject>
 #include <QtScript/QScriptable>
 
+#include "qtmonkey_agent_global.h"
+
 class QPoint;
 class QAbstractItemView;
 
@@ -11,7 +13,7 @@ namespace qt_monkey_agent
 
 class Agent;
 
-void moveMouseTo(Agent &, const QPoint &point);
+QTMONKEY_AGENT_EXPORT void moveMouseTo(Agent &, const QPoint &point);
 void clickInGuiThread(Agent &agent, const QPoint &posA, QWidget &wA,
                       Qt::MouseButton btn, bool dblClick);
 QWidget *getWidgetWithSuchName(Agent &agent, const QString &objectName,
@@ -30,7 +32,7 @@ class ScriptAPI
 {
     Q_OBJECT
 public:
-    class Step final
+    class QTMONKEY_AGENT_EXPORT Step final
     {
     public:
         explicit Step(Agent &agent);

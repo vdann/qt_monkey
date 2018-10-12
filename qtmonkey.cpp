@@ -1,6 +1,8 @@
 //#define DEBUG_MOD_QTMONKEY
 #include "qtmonkey.hpp"
 
+#include "json11.hpp"
+
 #include <atomic>
 #include <cassert>
 #include <iostream>
@@ -17,7 +19,6 @@
 #include <QtCore/QThread>
 
 #include "common.hpp"
-#include "json11.hpp"
 #include "qtmonkey_app_api.hpp"
 
 #ifdef DEBUG_MOD_QTMONKEY

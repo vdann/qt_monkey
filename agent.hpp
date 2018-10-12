@@ -13,6 +13,8 @@
 #include "semaphore.hpp"
 #include "shared_resource.hpp"
 
+#include "qtmonkey_agent_global.h"
+
 class QAction;
 class QThread;
 
@@ -31,7 +33,7 @@ class MacMenuActionWatcher;
  * This class is used as agent inside user's program
  * to catch/apply Qt events
  */
-class Agent
+class QTMONKEY_AGENT_EXPORT Agent
 #ifndef Q_MOC_RUN
     final
 #endif
